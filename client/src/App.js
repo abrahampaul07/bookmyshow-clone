@@ -7,6 +7,8 @@ import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import TheatresForMovie from "./pages/TheatresForMovie";
+import BookShow from "./pages/BookShow";
 
 // Styles
 import "./stylesheets/alignments.css";
@@ -52,6 +54,22 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/movie/:id"
+            element={
+              <ProtectedRoute>
+                <TheatresForMovie />
+               </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/book-show/:id"
+            element={
+              <ProtectedRoute>
+                <BookShow />
+               </ProtectedRoute>
+            }
+          />  
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
